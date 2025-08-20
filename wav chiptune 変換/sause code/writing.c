@@ -93,12 +93,12 @@ void header_and_data( struct file_data *file_data,struct data_change *change,str
 		}
 	}
 	chiptune->fmt_chunk=16;
-	write_32(chiptune->fmt_chunk_b,chiptune->fmt_chunk);											//フォーマットチャンクをセット(var0.1)
+	write_32(chiptune->fmt_chunk_b,chiptune->fmt_chunk);											//フォーマットチャンクをセット(ver0.1)
 	return;
 }
 
 int write_data(struct chiptune_data *chiptune_data){
-	if((chiptune_data->binary=(char *)malloc((unsigned int)(chiptune_data->chunk_size+8)))==NULL){						//全部のデータを一つにまとめる関数(var0.1)
+	if((chiptune_data->binary=(char *)malloc((unsigned int)(chiptune_data->chunk_size+8)))==NULL){						//全部のデータを一つにまとめる関数(ver0.1)
 		printf("エラー:バイナリデータのメモリの確保失敗\n");
 		return -1;
 	}

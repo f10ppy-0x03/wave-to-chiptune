@@ -33,7 +33,7 @@ int search_filename(char **filename){																//ファイル名をとっ�
 int controll_file(char *filename,struct file_data *data){											//ファイルを開いてヘッダ解析する関数
 	
 	FILE *fp;
-	char *file=malloc(HEADERSIZE);																	//var0.2
+	char *file=malloc(HEADERSIZE);																	//ver0.1
 	int size;
 	
 	fp=fopen(filename,"rb");																		//引数のファイルを開く
@@ -44,7 +44,7 @@ int controll_file(char *filename,struct file_data *data){											//ファイ�
 		return -1;
 	}
 	
-	size=fread(file,sizeof(char),HEADERSIZE,fp);													//ファイルの中身を44文字読み取る(var 0.2)
+	size=fread(file,sizeof(char),HEADERSIZE,fp);													//ファイルの中身を44文字読み取る(ver 0.1)
 	for(int i=0;i<size;i++){
 		printf("%x ",(unsigned char)file[i]);
 	}
@@ -64,7 +64,7 @@ int controll_file(char *filename,struct file_data *data){											//ファイ�
 	return 0;
 }
 
-int judgefile(char *file,struct file_data *data){													//ファイルのヘッダ解析をする関数(var0.2)
+int judgefile(char *file,struct file_data *data){													//ファイルのヘッダ解析をする関数(ver0.2)
 	
 
 	
