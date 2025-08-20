@@ -33,3 +33,9 @@ waveファイルをchiptune風に変換する
   .wavファイルが新しくできる
 
   開けたら成功    
+
+#   コードの説明
+  main.c:実行部分です。
+  wave.c:waveファイルのデータを取り出して解析するコードです
+  trans.c:waveからchiptune風にするコードです。
+  writing.c:新しいファイルに書き込むコードです。
